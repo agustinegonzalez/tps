@@ -4,8 +4,8 @@
 
 void pide (int[][10], char *[5]);
 void muestra(char *[5], int [5][10]);
-int alto(int [5][10], char *[5]);
-int bajo(int [5][10], char *[5]);
+void alto(int [5][10], char *[5]);
+void bajo(int [5][10], char *[5]);
 
 int main()
 {
@@ -68,7 +68,7 @@ void muestra(char *causas[], int contador[][10])
   }
 }
 
-int alto(int contador[][10], char *causas[]){
+void alto(int contador[][10], char *causas[]){
   int alto[5]={0};
   int max=0;
   int pos=0;
@@ -90,7 +90,7 @@ int alto(int contador[][10], char *causas[]){
   "puntaje es %d""\n\n", causas[pos], max);
 }
 
-int bajo(int contador[][10], char *causas[])
+void bajo(int contador[][10], char *causas[])
 {
   int bajo[5]={0};
   int min=50;
