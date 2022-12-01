@@ -36,15 +36,18 @@ void imprimirdatos(union u u1){
 
   int sign=u1.i>>31;
   printf("Bit de signo: ");
-  signo(u1);printf(" (%d)\n", sign);
+  signo(u1);
+	printf(" (%d)\n", sign);
   
   int exp=(u1.i<<1)>>24;
   printf("Bits del exponente: ");
-  exponente(u1); printf(" (%d)\n", exp);
+  exponente(u1);
+	printf(" (%d)\n", exp);
   
   int manti=(u1.i<<9)>>9;
   printf("Bits de la mantisa: ");
-  mantisa(u1);printf(" (%d)\n", manti);
+  mantisa(u1);
+	printf(" (%d)\n", manti);
 	  
 }
 
