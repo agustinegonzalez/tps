@@ -4,26 +4,12 @@ union u
 {
 	unsigned int i;
 	float f;
-	
 };
 
 void imprimirdatos();
-
-void signo(union u u1){
-  printf("%d", u1.i>>31&1);
-}
-
-void exponente(union u u1){
-  int pos;
-  for(pos=30;pos>=23;pos--)
-		printf("%d",u1.i>>pos&1);
-}
-
-void mantisa (union u u1){
-  int pos;
-  for(pos=22;pos>=0;pos--)
-		printf("%d",u1.i>>pos&1);
-}
+void signo(union u u1);
+void exponente(union u u1);
+void mantisa (union u u1);
 
 int main()
 {
@@ -60,4 +46,20 @@ void imprimirdatos(union u u1){
   printf("Bits de la mantisa: ");
   mantisa(u1);printf(" (%d)\n", manti);
 	  
-}	  
+}
+
+void signo(union u u1){
+  printf("%d", u1.i>>31&1);
+}
+
+void exponente(union u u1){
+  int pos;
+  for(pos=30;pos>=23;pos--)
+		printf("%d",u1.i>>pos&1);
+}
+
+void mantisa (union u u1){
+  int pos;
+  for(pos=22;pos>=0;pos--)
+		printf("%d",u1.i>>pos&1);
+}
