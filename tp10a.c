@@ -63,6 +63,7 @@ void exponente(union u u1){
 
 void mantisa (union u u1){
   int pos;
+	
   for(pos=22;pos>=0;pos--)
 		printf("%d",u1.i>>pos&1);
 }
